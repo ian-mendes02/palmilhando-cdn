@@ -1,7 +1,9 @@
-const floatingButtons = document.querySelector('[data-button="container"]');
-const buttons = document.querySelectorAll('[data-button="container"] a');
-const buttonContent = document.querySelectorAll('[data-button="container"] button');
-const scrollTop = document.querySelectorAll('[data-button="scroll-top"]');
+const floatingButtons = document.querySelector('[data-component="floating-buttons"]');
+const buttons = floatingButtons.querySelectorAll('a');
+const buttonContent = floatingButtons.querySelectorAll('a button');
+const scrollTop = floatingButtons.querySelectorAll('[data-button="scroll-top"]');
+
+floatingButtons.innerHTML = `\n\t<a href="" data-button="scroll-top"><button></button></a>\n\t<a href="" data-button="whatsapp"><button></button></a>`
 
 window.addEventListener('scroll', function () {
     buttonContent.forEach(button => button.style.opacity = '1')
